@@ -107,6 +107,7 @@ nano ~/mpi_cuda_matrix_mul.cu
 #### <ins>mpi_cuda_matrix_mul.cu</ins> has the CUDA code below:
 
 ```python
+
 #include <mpi.h>
 #include <stdio.h>
 #include <cuda_runtime.h>
