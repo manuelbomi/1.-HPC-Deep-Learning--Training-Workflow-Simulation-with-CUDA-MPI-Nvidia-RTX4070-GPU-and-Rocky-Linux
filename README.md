@@ -12,5 +12,13 @@
     
 #### This is similar to what frameworks like PyTorch Distributed, Horovod, or DeepSpeed do under the hood in HPC/AI environments.
 
+---
+
+##  Background Studies:
+
+### Matrix Multiplication Is Everywhere in AI
+
+#### Here are real-world examples:
+
 
 
