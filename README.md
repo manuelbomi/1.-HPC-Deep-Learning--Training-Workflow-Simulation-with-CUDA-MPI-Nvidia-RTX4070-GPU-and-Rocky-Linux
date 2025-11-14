@@ -29,6 +29,55 @@
 
 In fact, over 90% of the FLOPs (floating point operations) in models like GPT or ResNet are matrix multiplications.
 
+---
+
+## Why GPUs and CUDA Matter for AI Training
+#### GPUs are designed for massively parallel workloads — exactly what matrix multiplication needs.
+
+    • A 256×256 matrix multiply has 65,536 output elements.
+    • Each can be computed independently, making it ideal for GPUs.
+    • CUDA essentially  launch thousands of threads that each compute one cell of the output matrix.
+    
+#### That is why GPUs dominate AI:
+
+#### They are essentially matrix-multiplication machines.
+
+---
+
+## Why We Need MPI (Message Passing Interface)
+#### MPI is a standardized API used in High-Performance Computing (HPC) for passing messages between processes, typically across:
+
+- multiple CPUs
+
+- multiple compute nodes
+
+- multi-GPU or hybrid CPU/GPU clusters
+
+#### It is the core communication layer used to build distributed training, scientific simulations, parallel numerical solvers, and more. MPI provides this communication layer — the “glue” that lets GPUs cooperate like one large distributed supercomputer.
+
+#### When an AI model is trained on multiple GPUs or nodes:
+    • Each GPU works on a portion of the data.
+    • After computing gradients, all GPUs share and synchronize results using MPI.
+
+#### This is why MPI is central to distributed CUDA jobs, multi-node Slurm workloads, and AI model parallelism.
+
+#### MPI enables processes to exchange data using:
+
+- MPI_Send, MPI_Recv → point-to-point communication
+
+- MPI_Bcast, MPI_Reduce, MPI_Allreduce → collective communication
+
+- MPI_Comm_rank, MPI_Comm_size → process management
+
+- MPI_Barrier → synchronization
+
+#### So combining:
+- MPI + CUDA = scalable, distributed AI computation
+
+#### That is exactly how clusters with H100s or A100s work in enterprise or research HPC environments.
+
+---
+
 
 
 
