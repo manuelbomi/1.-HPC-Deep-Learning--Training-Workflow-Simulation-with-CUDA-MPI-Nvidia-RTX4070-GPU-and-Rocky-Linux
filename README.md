@@ -297,6 +297,9 @@ mpirun -np 2 ~/mpi_cuda_matrix_mul
     
 #### The ideas shared in this project are similar to using CUDA, MPI, and HPC workflows pn Nvidia H100/A100 clusters and integrate later with Slurm job schedulers.
 
+## Slurm + CUDA + MPI based version of the project
+#### For completeness, interested readers may wish to check the Slurm based version of the project. It is available here:  https://github.com/manuelbomi/End-to-End-HPC-AI-Training-Simulation-with-CUDA-MPI-and-Slurm-on-Rocky-Linux-----RHEL-Compatible.git
+
 
 
 
